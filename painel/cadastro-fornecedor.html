@@ -195,7 +195,7 @@
 
             if (camposNaoPreenchidos.length > 0){
                 const msg = `Os seguintes campos não foram preenchidos: ${camposNaoPreenchidos.join(', ')}`;
-                mensagem('success', msg);
+                mensagem('error', msg);
                 return false;
             }
 
