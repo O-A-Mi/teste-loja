@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <link rel="stylesheet" href="assets/estilos.css">
+        <title>Painel Administrativo</title>
+    </head>
+    <body style="margin: 0px;">
+        <div class="d-flex">
+            <div class="menu-lateral">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-logo" src="assets/img/logo.png" alt="Logo">
+                    </div>
+                    <div class="col-12">
+                        <div class="menu-item" data-href="">Geral</div>
+                        <div class="menu-item" id="menu-usuarios">Usuários</div>
+                        <div class="submenu-item" id="submenu-usuarios">
+                            <ol class="submenu-lista">
+                                <li class="item" data-href="">Listagem</li>
+                                <li class="item" data-href="">Cadastro</li>
+                                <li class="item" data-href="">Exclusão</li>
+                                <li class="item" data-href="">Edição</li>
+                            </ol>
+                        </div>
+                        <div class="menu-item" id="menu-fornecedores">Fornecedores</div>
+                        <div class="submenu-item" id="submenu-fornecedores">
+                            <ol class="submenu-lista">
+                                <li class="item" data-href="">Listagem</li>
+                                <li class="item" data-href="">Cadastro</li>
+                                <li class="item" data-href="">Exclusão</li>
+                                <li class="item" data-href="">Edição</li>
+                            </ol>
+                        </div>
+                        <div class="menu-item" id="menu-departamentos">Departamentos</div>
+                        <div class="submenu-item" id="submenu-departamentos">
+                            <ol class="submenu-lista">
+                                <li class="item" data-href="">Listagem</li>
+                                <li class="item" data-href="">Cadastro</li>
+                                <li class="item" data-href="">Exclusão</li>
+                                <li class="item" data-href="">Edição</li>
+                            </ol>
+                        </div>
+                        <div class="menu-item" id="menu-produtos">Produtos</div>
+                        <div class="submenu-item" id="submenu-produtos">
+                            <ol class="submenu-lista">
+                                <li class="item" data-href="">Listagem</li>
+                                <li class="item" data-href="">Cadastro</li>
+                                <li class="item" data-href="">Exclusão</li>
+                                <li class="item" data-href="">Edição</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conteudo pt-3 pb-3">
+                <div class="row">
+                    <div class="col-12 pb-3" id="caminho">
+                        <a href="" class="text-decoration-none">
+                            <svg fill="#75758a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 495.398 495.398" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><g><g><path d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391 v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158 c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747 c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"></path><path d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401 c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79 c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"></path></g></g></g></g></svg>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <form method="post" name="form-post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-6">Fantasia</div>
+                                <div class="col-6">Razão</div>
+                                <div class="col-6"><input type="text" name="fantasia" id="fantasia"></div>
+                                <div class="col-6"><input type="text" name="razao" id="razao"></div>
+
+                                <div class="col-4">CNPJ</div>
+                                <div class="col-8">Endereço</div>
+                                <div class="col-4"><input type="text" name="cnpj" id="cnpj"></div>
+                                <div class="col-8"><input type="text" name="endereco" id="endereco"></div>
+
+                                <div class="col-3">Cidade</div>
+                                <div class="col-9">Bairro</div>
+                                <div class="col-3"><input type="text" name="cidade" id="cidade"></div>
+                                <div class="col-9"><input type="text" name="bairro" id="bairro"></div>
+
+                                <div class="col-4">CEP</div>
+                                <div class="col-8">Estado (UF)</div>
+                                <div class="col-4"><input type="text" name="cep" id="cep"></div>
+                                <div class="col-8"><input type="text" name="estado" id="estado"></div>
+
+                                <div class="col-4">Telefone (1)</div>
+                                <div class="col-4">Telefone (2)<span class="red-span">*</span></div>
+                                <div class="col-4">Telefone (3)<span class="red-span">*</span></div>
+                                <div class="col-4"><input type="text" name="telefone1" id="telefone1"></div>
+                                <div class="col-4"><input type="text" name="telefone2" id="telefone2"></div>
+                                <div class="col-4"><input type="text" name="telefone3" id="telefone3"></div>
+
+                                <div class="col-6">E-mail</div>
+                                <div class="col-6">Logo</div>
+                                <div class="col-6"><input type="text" name="email" id="email"></div>
+                                <div class="col-6"><input type="file" name="logo" id="logo"></div>
+
+                                <div class="col-12 py-3"><span class="red-span-advice">Campos marcados com "<span class="red-span">*</span>" são opcionais.</span></div>
+                                
+                                <div class="col-12 text-end"><button class="btn-enviar" id="enviar-form">ENVIAR</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"><div class="aviso"></div></div>
+    </body>
+
+    <script>
+        var msg = 'Os seguintes itens não foram preenchidos: ';
+
+        function mensagem(icon, msg){
+            var svgIcone;
+            var corBorda;
+
+            if(icon == 'success'){
+                svgIcone = `<svg width="64px" height="64px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#19df23"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>success</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="add-copy" fill="#19df23" transform="translate(42.666667, 42.666667)"> <path d="M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51296 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.153707,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51296 331.153707,3.55271368e-14 213.333333,3.55271368e-14 Z M213.333333,384 C119.227947,384 42.6666667,307.43872 42.6666667,213.333333 C42.6666667,119.227947 119.227947,42.6666667 213.333333,42.6666667 C307.43872,42.6666667 384,119.227947 384,213.333333 C384,307.43872 307.438933,384 213.333333,384 Z M293.669333,137.114453 L323.835947,167.281067 L192,299.66912 L112.916693,220.585813 L143.083307,190.4192 L192,239.335893 L293.669333,137.114453 Z" id="Shape"></path></g></g></g></svg>`;
+                corBorda = '#19df23';
+            }else if(icon == 'error'){
+                svgIcone = `<svg fill="#df193a" height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M120,240c66.168,0,120-53.831,120-120S186.168,0,120,0S0,53.832,0,120S53.832,240,120,240z M120,30 c49.626,0,90,40.374,90,90s-40.374,90-90,90s-90-40.374-90-90S70.374,30,120,30z M69.144,149.644L98.787,120L69.144,90.356 l21.213-21.213L120,98.787l29.644-29.644l21.213,21.213L141.213,120l29.643,29.644l-21.213,21.213L120,141.213l-29.644,29.643 L69.144,149.644z"></path></g></svg>`;
+                corBorda = '#df193a';
+            }
+
+            $('.overlay').fadeIn();
+            $('.aviso').css('border-color', corBorda);
+            $('.aviso').html('<div class="row"><div class="col-12"><div class="text-center mx-auto py-3">'+svgIcone+'</div></div><div class="col-12"><p>'+msg+'</p></div></div>');
+
+            setTimeout(function(){
+                $('.overlay').fadeOut();
+            }, 2000);
+        }
+
+        $('.menu-item').click(function(){
+            const referencia = $(this).data('href');
+            if (referencia){
+                window.location = referencia;
+                return;
+            }
+
+            const submenuId = $(this).next('.submenu-item');
+            $('.submenu-item').not(submenuId).slideUp('fast');
+            submenuId.slideToggle('fast');
+        });
+
+        $('.item').click(function(){
+            const referencia = $(this).data('href');
+            window.location = referencia;
+        });
+
+        $('#enviar-form').click(function(e){
+            e.preventDefault();
+            
+            const dadosFormulario = {
+                fantasia: $('input[name="fantasia"]').val(),
+                razao: $('input[name="razao"]').val(),
+                cnpj: $('input[name="cnpj"]').val(),
+                endereco: $('input[name="endereco"]').val(),
+                cidade: $('input[name="cidade"]').val(),
+                bairro: $('input[name="bairro"]').val(),
+                cep: $('input[name="cep"]').val(),
+                estado: $('input[name="estado"]').val(),
+                telefone1: $('input[name="telefone1"]').val(),
+                telefone2: $('input[name="telefone2"]').val(),
+                telefone3: $('input[name="telefone3"]').val(),
+                email: $('input[name="email"]').val(),
+                logo: $('#logo')[0].files[0]
+            };
+
+            const camposNaoPreenchidos = [];
+            const camposObrigatorios = [
+                { campo: 'fantasia', label: 'Fantasia' },
+                { campo: 'razao', label: 'Razão Social' },
+                { campo: 'cnpj', label: 'CNPJ' },
+                { campo: 'endereco', label: 'Endereço' },
+                { campo: 'cidade', label: 'Cidade' },
+                { campo: 'bairro', label: 'Bairro' },
+                { campo: 'cep', label: 'CEP' },
+                { campo: 'estado', label: 'Estado' },
+                { campo: 'telefone1', label: 'Telefone 1' },
+                { campo: 'email', label: 'E-mail' }
+            ];
+
+            camposObrigatorios.forEach((item) =>{
+                if (!dadosFormulario[item.campo]) {
+                    camposNaoPreenchidos.push(item.label);
+                }
+            });
+
+            if (camposNaoPreenchidos.length > 0){
+                const msg = `Os seguintes campos não foram preenchidos: ${camposNaoPreenchidos.join(', ')}`;
+                mensagem('success', msg);
+                return false;
+            }
+
+            const formData = new FormData();
+            for (const [campo, valor] of Object.entries(dadosFormulario)) {
+                formData.append(campo, valor);
+            }
+
+            $.ajax({
+                url: 'processa.php',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response){
+                    if (response.success) {
+                        mensagem('success', response.message);
+                        console.log(response.data);
+                    } else {
+                        mensagem('error', response.message);
+                    }
+                },
+                error: function(xhr, status, error){
+                    mensagem('error', `Erro ao processar a solicitação: ${xhr.responseText}`);
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            caminho('Cadastro de Fornecedor');
+        });
+    </script>
+</html>
